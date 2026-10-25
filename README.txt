@@ -1,1 +1,1 @@
-Upload index.html to the ROOT of crowdragontree/introduction-designer. GitHub Pages should use main / (root). This overwrites the hosted editor when deployed. Templates stay isolated in each user browser. Existing user localStorage drafts/templates are not deleted when replacing index.html.
+A free, browser-based visual editor for designing custom JuicyChat character introductions without coding. Drag, drop, resize, crop, and style text, images, borders, and dividers. Import existing HTML, save reusable templates, and copy formatted introduction code directly into JuicyChat.
