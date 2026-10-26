@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-27/YgmenzDI0dxOGgG85id8ZmTmT6095o5DFUy8RZ9M=' 'sha256-d9SKUTaLLkCoZoYf2PWnnNy1bNcHsFKgqKOSZNtEdH0=' 'sha256-efKw9CaA6oOJQ9xFeMve1E3uY9hTDxGDa/+nhhOguMU=' 'sha256-hflbpSSDy3AdL7Y177kn9XLSM3aX5zW0nMJZzfaMxWk='; style-src 'unsafe-inline'; img-src https: data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-m/n8u0OaqlZf12Q0Ps/KClPIibAiwETqXX+ZSNTAeC0=' 'sha256-d9SKUTaLLkCoZoYf2PWnnNy1bNcHsFKgqKOSZNtEdH0=' 'sha256-EMp6wsECOzqZmGB5qDExyQeDY/eVv6xj4TXDG2RWV3Q=' 'sha256-4KCYHv5f/aKNqBBjuYqnFPDIC0Xt7iO4Dfl3PJ2udm0=' 'sha256-kmhfLiNOc1KxeSSgsiTrSNB/ddA/ZL+lB/F0kk/YyTE=' 'sha256-SIGudCWHWA4Yf3sAmtBTUSFkVqn4VRrhzpLNA12HwbU='; style-src 'unsafe-inline'; img-src https: data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Introduction Designer</title><style>:root{color-scheme:dark;font-family:Inter,"Segoe UI",system-ui,sans-serif;--bg:#100d16;--panel:#18121f;--line:#392d43;--muted:#b49cbe;--text:#f4ecf7;--accent:#a76ad7;--accent2:#ca95eb;--input:#0f0b15}
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;color:var(--text);background:var(--bg);font-size:13px}body{height:100vh;display:flex;flex-direction:column;overflow:hidden}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.35;cursor:not-allowed}button,select,input,textarea{border:1px solid #493651;border-radius:8px;background:var(--input);color:var(--text)}button{padding:8px 11px;font-weight:650;white-space:nowrap}button:hover:not(:disabled){border-color:var(--accent2);background:#2e2038}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid #b77fe8;outline-offset:1px}
 .id-primary{background:#7d3ea8;border-color:#a65bd5;color:white}.id-primary:hover:not(:disabled){background:#9050c2}.id-highlight{background:#ba70dc;border-color:#cb90e7;color:#190c25}.id-ghost{background:#241b2d}.id-danger{color:#ffa5a2;border-color:#6c3a4e}.id-muted{color:var(--muted);font-size:11px}.id-topbar{height:64px;display:flex;align-items:center;justify-content:space-between;padding:9px 16px;gap:18px;border-bottom:1px solid var(--line);background:#18111f;flex-shrink:0}.id-brand{display:flex;gap:11px;align-items:center;min-width:225px}.id-brand-icon{width:38px;height:38px;display:grid;place-items:center;font-size:22px;font-weight:bold;border-radius:12px;background:linear-gradient(140deg,#a456b9,#684097)}.id-brand strong{font-size:17px;display:block;line-height:1.3}.id-brand small{display:block;font-size:10px;color:#bda8c8}.id-top-actions{display:flex;align-items:center;justify-content:flex-end;gap:6px;flex-wrap:wrap}.id-top-actions button,.id-top-actions select{font-size:11px;padding:7px 9px}.id-top-actions select{max-width:170px}
 .id-app{display:grid;grid-template-columns:284px minmax(0,1fr) 290px;min-height:0;flex:1}.id-sidebar,.id-inspector{overflow-y:auto;background:var(--panel);scrollbar-color:#5d4467 transparent}.id-sidebar{border-right:1px solid var(--line);padding:14px}.id-inspector{border-left:1px solid var(--line)}.id-workspace{min-width:0;overflow-y:auto;display:flex;flex-direction:column;background:#0d0a11}.id-sidebar h2,.id-inspector h2{font-size:13px;margin:0}.id-section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}.id-section-head.id-bordered{padding-top:17px;border-top:1px solid var(--line);margin-top:15px}.id-content-fields label,.id-inspector-body label{display:flex;flex-direction:column;gap:5px;font-size:11px;font-weight:700;color:#cdb7d7;margin-bottom:12px}.id-content-fields input,.id-content-fields textarea{width:100%;padding:9px 10px;line-height:1.4;resize:vertical}.id-content-fields textarea{min-height:62px}.id-content-fields label .id-muted{font-weight:400}.id-palette{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.id-palette button{text-align:left;font-size:11px;padding:9px 7px;background:#211729;border-color:#47344e}.id-palette button:hover{background:#33203f}.id-layers{display:flex;flex-direction:column;gap:5px}.id-layer{border:1px solid #48394f;border-radius:9px;background:#21192a;display:flex;gap:5px;align-items:center;padding:5px 6px;min-height:36px;cursor:grab}.id-layer.active{border-color:#b879d9;background:#362445}.id-layer.drag-over{border-top:3px solid #cf96f1}.id-layer-label{font-weight:650;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;border:0;background:transparent;flex:1;min-width:0}.id-layer .id-handle{color:var(--muted);padding:0 2px}.id-layer button:last-child{border:0;padding:4px 6px;background:transparent}.id-hint{font-size:10px;color:var(--muted);line-height:1.6}
-.id-workspace-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 18px;border-bottom:1px solid var(--line);flex-wrap:wrap;background:#16101d}.id-toggle{display:flex;background:#0c0910;border-radius:9px;padding:3px;gap:3px}.id-toggle button{background:transparent;border:none;border-radius:7px;color:#c9b4d4}.id-toggle button.active{background:#5c3677;color:white}.id-preview-tools{display:flex;align-items:center;gap:13px}.id-preview-tools label{display:flex;align-items:center;gap:7px;color:#d7c2e2;font-size:11px}.id-preview-tools select{padding:5px 6px;font-size:11px}.id-canvas-stage{padding:22px 14px 34px;flex:1;display:flex;flex-direction:column;align-items:center;gap:12px;background-image:radial-gradient(circle at center,rgba(135,68,169,.09),transparent 60%)}.id-preview-note{letter-spacing:2px;color:#8f76a1;font-size:10px;font-weight:750}.id-canvas{width:480px;max-width:100%;min-height:120px;box-shadow:0 18px 65px rgba(0,0,0,.55);border-radius:12px;background:#100a15;padding:0;overflow:visible;transition:width .16s}.id-canvas-hint{color:#a893b1;font-size:10px;text-align:center}.id-canvas [data-block-id]{cursor:pointer;transition:outline-color .1s;position:relative}.id-canvas [data-block-id]:hover{outline:1px dashed #e4b1ff;outline-offset:2px}.id-canvas [data-block-id].id-selected{outline:2px solid #e4a1ff!important;outline-offset:3px}.id-canvas [data-block-id][contenteditable]{outline:2px solid #ffd1ff!important;cursor:text}.id-canvas img{max-width:100%}.id-html-panel{padding:25px;line-height:1.7}.id-html-panel h2{font-size:18px;margin:0 0 8px}.id-html-panel code{background:#34243f;padding:2px 4px;border-radius:4px}.id-html-panel textarea{resize:vertical;width:100%;padding:14px;min-height:270px;font:12px/1.5 Consolas,monospace;white-space:pre}.id-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.id-note{font-size:11px;color:#b59cbe;line-height:1.5}.id-output{border-top:1px solid var(--line);padding:13px 20px;background:#15101c}.id-output-head{display:flex;justify-content:space-between;align-items:center;gap:15px}.id-output h3{font-size:12px;margin:0 0 3px}.id-output p{margin:0;color:var(--muted);font-size:10px}.id-output textarea{width:100%;margin-top:10px;resize:vertical;min-height:90px;padding:10px;font:11px/1.55 Consolas,monospace}
+.id-workspace-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 18px;border-bottom:1px solid var(--line);flex-wrap:wrap;background:#16101d}.id-toggle{display:flex;background:#0c0910;border-radius:9px;padding:3px;gap:3px}.id-toggle button{background:transparent;border:none;border-radius:7px;color:#c9b4d4}.id-toggle button.active{background:#5c3677;color:white}.id-preview-tools{display:flex;align-items:center;gap:13px}.id-preview-tools label{display:flex;align-items:center;gap:7px;color:#d7c2e2;font-size:11px}.id-preview-tools select{padding:5px 6px;font-size:11px}.id-canvas-stage{padding:22px 14px 34px;flex:1;display:flex;flex-direction:column;align-items:center;gap:12px;background-image:radial-gradient(circle at center,rgba(135,68,169,.09),transparent 60%)}.id-preview-note{letter-spacing:2px;color:#8f76a1;font-size:10px;font-weight:750}.id-canvas{width:748px;max-width:100%;min-height:120px;box-shadow:0 18px 65px rgba(0,0,0,.55);border-radius:12px;background:#100a15;padding:0;overflow:visible;transition:width .16s}.id-canvas-hint{color:#a893b1;font-size:10px;text-align:center}.id-canvas [data-block-id]{cursor:pointer;transition:outline-color .1s;position:relative}.id-canvas [data-block-id]:hover{outline:1px dashed #e4b1ff;outline-offset:2px}.id-canvas [data-block-id].id-selected{outline:2px solid #e4a1ff!important;outline-offset:3px}.id-canvas [data-block-id][contenteditable]{outline:2px solid #ffd1ff!important;cursor:text}.id-canvas img{max-width:100%}.id-html-panel{padding:25px;line-height:1.7}.id-html-panel h2{font-size:18px;margin:0 0 8px}.id-html-panel code{background:#34243f;padding:2px 4px;border-radius:4px}.id-html-panel textarea{resize:vertical;width:100%;padding:14px;min-height:270px;font:12px/1.5 Consolas,monospace;white-space:pre}.id-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.id-note{font-size:11px;color:#b59cbe;line-height:1.5}.id-output{border-top:1px solid var(--line);padding:13px 20px;background:#15101c}.id-output-head{display:flex;justify-content:space-between;align-items:center;gap:15px}.id-output h3{font-size:12px;margin:0 0 3px}.id-output p{margin:0;color:var(--muted);font-size:10px}.id-output textarea{width:100%;margin-top:10px;resize:vertical;min-height:90px;padding:10px;font:11px/1.55 Consolas,monospace}
 .id-inspector-tabs{display:flex;gap:0;position:sticky;top:0;background:#1a1322;z-index:1;border-bottom:1px solid var(--line)}.id-inspector-tabs button{flex:1;border:0;border-radius:0;background:transparent;color:#c2afc9;font-size:12px}.id-inspector-tabs button.active{border-bottom:2px solid #b97de4;background:#31213f;color:#fff}.id-inspector-body{padding:16px}.id-inspector-body h2{margin:0 0 17px}.id-inspector-body label{flex-direction:row;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}.id-inspector-body input[type=color]{width:48px;height:30px;padding:3px;border-radius:6px;cursor:pointer}.id-inspector-body input[type=range]{width:116px;accent-color:#b779d9}.id-inspector-body input[type=checkbox]{width:17px;height:17px;accent-color:#ac69ce}.id-inspector-body input[type=number]{width:90px;padding:6px}.id-inspector-body select{width:132px;padding:6px;font-size:11px}.id-inspector-body textarea,.id-inspector-body input[type=text],.id-inspector-body input:not([type]){width:100%;padding:9px}.id-inspector-body #id-text-wrap{flex-direction:column;align-items:stretch}.id-inspector-body #id-text-wrap textarea{min-height:85px;resize:vertical}.id-inspector-body #id-text-wrap small{color:var(--muted);font-weight:400}.id-inspector-body #id-left-wrap,.id-inspector-body #id-right-wrap,.id-inspector-body #id-url-wrap,.id-inspector-body #id-alt-wrap,.id-inspector-body #id-ratio-wrap{flex-direction:column;align-items:stretch}.id-inspector-body #id-left-wrap textarea,.id-inspector-body #id-right-wrap textarea{width:100%}.id-inspector-body #id-url-wrap input,.id-inspector-body #id-alt-wrap input,.id-inspector-body #id-ratio-wrap input{width:100%}.id-element-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:18px}.id-element-actions button{font-size:11px}.id-footer{min-height:60px;flex-shrink:0;background:#1a1121;border-top:1px solid #4c315d;padding:9px 16px;display:flex;justify-content:space-between;align-items:center;gap:20px}.id-footer strong{display:block;font-size:13px}.id-budget{font-size:10px;color:#bca9c8}.id-budget.error,.id-footer strong.error{color:#ffa2a2}.id-footer-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.id-footer-actions button{font-size:12px;padding:10px 12px}#id-message{font-size:11px;color:#b6f1cb;max-width:330px}#id-message.error{color:#ff9e9e}#id-unsaved.busy{color:#ffe6af}
 @media(max-width:1250px){.id-app{grid-template-columns:235px minmax(0,1fr) 245px}.id-topbar{height:auto;min-height:64px}.id-brand small{display:none}}
 @media(max-width:1000px){.id-app{grid-template-columns:220px minmax(0,1fr)}.id-inspector{position:absolute;right:0;top:120px;bottom:60px;width:260px;z-index:4;box-shadow:-16px 0 30px #0009}.id-workspace{padding-right:0}.id-inspector:not(:focus-within){opacity:.97}}
@@ -315,15 +315,37 @@
 .id-preview-tools .id-more-settings-menu label{display:flex;justify-content:flex-start;gap:9px;font-size:12px;color:#ead9ed;align-items:center}
 .id-preview-tools .id-more-settings-menu input{width:16px;height:16px;accent-color:#ae72db}
 .id-preview-tools #id-stage-height-wrap[hidden],.id-preview-tools #id-auto-height-readout[hidden]{display:none!important}
+
+/* ---- Simple mode, looks gallery, tips, character meter (shared by every host) ---- */
+body.id-simple .id-adv{display:none!important}
+.id-mode{margin-right:6px}.id-mode button{padding:5px 11px}
+.id-warn{color:#f0b23d;font-size:11px;line-height:1.5;margin:6px 0;display:block}.id-warn[hidden]{display:none}
+.id-tips{display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px;padding:10px 18px;background:#241833;border-bottom:1px solid var(--line);font-size:12px}
+.id-tips[hidden]{display:none}.id-tips ol{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0;padding:0;list-style:none;flex:1}
+.id-tips li{display:flex;align-items:center;gap:8px}.id-tips li b{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#7d3ea8;color:#fff;font-size:11px}
+.id-tips li span{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.id-looks{position:fixed;inset:0;z-index:60;background:rgba(5,3,8,.8);display:flex;align-items:center;justify-content:center;padding:18px}
+.id-looks-box{background:var(--panel);border:1px solid var(--line);border-radius:14px;width:100%;max-width:960px;max-height:92vh;overflow:auto;padding:18px;box-shadow:0 20px 80px rgba(0,0,0,.6)}
+.id-looks-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:14px}.id-looks-head h2{margin:0 0 4px;font-size:18px}.id-looks-head p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.id-looks-grid{display:grid;grid-template-columns:repeat(auto-fill,210px);justify-content:center;gap:12px}
+.id-look{display:flex;flex-direction:column;align-items:stretch;gap:5px;text-align:left;padding:8px;background:#1f1727;height:auto}
+.id-look:hover,.id-look:focus-visible{border-color:var(--accent2);background:#2a1f36}
+.id-look strong{font-size:13px}.id-look>span{font-size:11px;color:var(--muted)}
+.id-look-thumb{position:relative;height:210px;overflow:hidden;border-radius:8px;background:#0d0a11;pointer-events:none}
+.id-look-inner{position:absolute;left:0;top:0;width:640px;transform:scale(.3);transform-origin:top left}
+.id-meter{height:4px;border-radius:2px;background:#2a2033;overflow:hidden;margin-top:5px;width:100%;min-width:160px}
+.id-meter i{display:block;height:100%;width:0;background:#6bd18f;transition:width .2s,background .2s}
+.id-meter i[data-level="warn"]{background:#f0b23d}.id-meter i[data-level="over"]{background:#ff6b6b}
+#id-counter.warn,#id-budget.warn{color:#f0b23d}
 </style></head>
-<body>
-<header class="id-topbar"><div class="id-brand"><span class="id-brand-icon">✦</span><div><strong>Introduction Designer</strong><small>Build your JuicyChat introduction by dragging, editing, and arranging items.</small></div></div><div class="id-top-actions">
-<button id="id-undo" class="id-ghost" type="button" title="Undo (Ctrl+Z)" disabled>↶ Undo</button><button id="id-redo" class="id-ghost" type="button" title="Redo (Ctrl+Shift+Z)" disabled>↷ Redo</button>
-<button id="id-new" class="id-ghost">New design</button><select id="id-template-select" aria-label="Saved introduction templates"><option value="">Saved templates</option></select><button id="id-use-template" class="id-ghost">Load</button><button id="id-save-template" class="id-ghost">Save as template</button><button id="id-template-export" class="id-ghost" title="Export selected template as JSON">Export</button><button id="id-template-import" class="id-ghost" title="Import saved JSON template">Import</button><button id="id-template-delete" class="id-ghost id-danger" title="Delete selected saved template">Delete</button>
+<body class="id-simple">
+<header class="id-topbar"><div class="id-brand"><span class="id-brand-icon">✦</span><div><strong>Introduction Designer</strong><small>Design your JuicyChat introduction. Pick a look, type your text, copy the code.</small></div></div><div class="id-top-actions">
+<button id="id-looks-open" class="id-primary" type="button" title="Start from a ready-made style">✦ Pick a look</button><button id="id-undo" class="id-ghost" type="button" title="Undo (Ctrl+Z)" disabled>↶ Undo</button><button id="id-redo" class="id-ghost" type="button" title="Redo (Ctrl+Shift+Z)" disabled>↷ Redo</button>
+<button id="id-new" class="id-ghost">New design</button><select id="id-template-select" aria-label="Saved introduction templates"><option value="">Saved templates</option></select><button id="id-use-template" class="id-ghost">Load</button><button id="id-save-template" class="id-ghost">Save as template</button><button id="id-template-export" class="id-ghost id-adv" title="Export selected template as JSON">Export</button><button id="id-template-import" class="id-ghost id-adv" title="Import saved JSON template">Import</button><button id="id-template-delete" class="id-ghost id-danger" title="Delete selected saved template">Delete</button>
 </div></header>
 <div class="id-app">
   <aside class="id-sidebar" aria-label="Introduction content and layers">
-    <div class="id-section-head"><h2>Content</h2><span class="id-muted">Edit without code</span></div>
+    <div class="id-section-head"><h2>Your text</h2><span class="id-muted">No code needed</span></div>
     <div class="id-content-fields">
       <label>Scene Name<input id="id-scene" placeholder="Scene Name"></label>
       <label>Character Name<input id="id-name" placeholder="Character Name"></label>
@@ -338,26 +360,27 @@
 
   </aside>
   <main class="id-workspace">
-    <div class="id-workspace-toolbar"><div class="id-toggle"><button id="id-visual-tab" class="active" aria-pressed="true">Design</button><button id="id-html-tab" aria-pressed="false">Paste HTML</button></div><div class="id-preview-tools"><label>Layout <select id="id-layout-mode" aria-label="Design layout mode"><option value="freeform">Move freely</option><option value="flow">Stack items</option></select></label><span id="id-auto-height-readout" class="id-auto-readout">Height: auto</span><label id="id-stage-height-wrap">Height <input id="id-stage-height" type="number" min="240" max="3000" step="10" value="240" aria-label="Manual canvas height in pixels"><span>px</span></label><label id="id-auto-height-wrap" class="id-canvas-checkbox" title="Automatically resize the background to fit your content"><input id="id-auto-height" type="checkbox" checked> Auto height</label><button id="id-fit-height" type="button" class="id-fit-height" title="Reset the background to the height of the content">Fit content</button><details class="id-more-settings"><summary>Options</summary><div class="id-more-settings-menu"><label title="Line up items with nearby edges"><input id="id-snap-enabled" type="checkbox" checked> Snap into place</label><label title="Show guide lines while moving items"><input id="id-show-guides" type="checkbox" checked> Show guides</label><label title="Move other items out of the way when an item is dropped"><input id="id-avoid-overlap" type="checkbox" checked> Move other items when dragging</label></div></details><label>Preview width <select id="id-preview-width"><option value="360">Mobile · 360px</option><option value="480" selected>JuicyChat · 480px</option><option value="640">Wide · 640px</option></select></label><span id="id-unsaved" class="id-muted">Saved on this device</span></div>
+    <div class="id-workspace-toolbar"><div class="id-toggle"><button id="id-visual-tab" class="active" aria-pressed="true">Design</button><button id="id-html-tab" class="id-adv" aria-pressed="false">Paste HTML</button></div><div class="id-preview-tools"><label>Layout <select id="id-layout-mode" aria-label="Design layout mode"><option value="flow">Stack (easiest)</option><option value="freeform">Free placement (advanced)</option></select></label><span id="id-auto-height-readout" class="id-auto-readout id-adv">Height: auto</span><label id="id-stage-height-wrap" class="id-adv">Height <input id="id-stage-height" type="number" min="240" max="3000" step="10" value="240" aria-label="Manual canvas height in pixels"><span>px</span></label><label id="id-auto-height-wrap" class="id-canvas-checkbox id-adv" title="Automatically resize the background to fit your content"><input id="id-auto-height" type="checkbox" checked> Auto height</label><button id="id-fit-height" type="button" class="id-fit-height id-adv" title="Reset the background to the height of the content">Fit content</button><details class="id-more-settings id-adv"><summary>Options</summary><div class="id-more-settings-menu"><label title="Line up items with nearby edges"><input id="id-snap-enabled" type="checkbox" checked> Snap into place</label><label title="Show guide lines while moving items"><input id="id-show-guides" type="checkbox" checked> Show guides</label><label title="Move other items out of the way when an item is dropped"><input id="id-avoid-overlap" type="checkbox" checked> Move other items when dragging</label></div></details><label title="How wide JuicyChat shows your introduction">Preview width <select id="id-preview-width"><option value="748" selected>JuicyChat · 748px</option><option value="480">Narrow · 480px</option><option value="360">Phone · 360px</option></select></label><span id="id-unsaved" class="id-muted">Saved on this device</span></div>
       <div id="id-html-actions" class="id-html-actions" role="group" aria-label="HTML editor actions" hidden><button id="id-apply-html" class="id-primary" type="button">Use pasted HTML</button><button id="id-back-visual" class="id-ghost" type="button">Return to visual designer</button><button id="id-return-generated" class="id-ghost" type="button">Use visual blocks again</button></div></div>
     <div id="id-visual-panel" class="id-canvas-stage"><div class="id-preview-note">YOUR INTRODUCTION</div><div id="id-canvas" class="id-canvas" aria-label="Visual introduction design canvas" tabindex="0"><div id="id-card"></div></div><p class="id-canvas-hint" id="id-canvas-hint">Drag to move. Resize using the handles. Click outside to deselect. Press Delete to remove.</p></div>
     <section id="id-html-panel" class="id-html-panel" hidden><h2>HTML &amp; existing templates</h2>
       <p>To edit existing Introduction code, paste it here and choose <strong>Use pasted HTML</strong>. Text placeholders: <code>{{scene}}</code>, <code>{{name}}</code>, <code>{{intro}}</code>, <code>{{extra}}</code>.</p>
       <div class="id-code-editor" id="id-import-editor"><pre class="id-code-highlight" id="id-import-highlight" aria-hidden="true"></pre><textarea id="id-custom-html" rows="16" spellcheck="false" wrap="off" aria-label="HTML source editor with syntax highlighting" placeholder="Paste an existing introduction's HTML, or edit the generated code here..."></textarea></div>
+      <p id="id-import-warn" class="id-warn" role="status" hidden></p>
       <details class="id-live-html" open><summary>Live HTML preview (updates while typing)</summary><div id="id-import-live-preview" class="id-import-live-preview" aria-label="Live sanitized HTML preview"></div></details>
       <p class="id-note">Custom HTML is checked against JuicyChat's guide and sanitized before preview/export. Imported HTML can be saved as a template. Compatible layouts become editable visual layers with their original borders and styles retained. Complex imported markup remains editable as custom layers.</p>
     </section>
     <section class="id-output"><div class="id-output-head"><div><h3>Your introduction code</h3><p>Ready to paste into JuicyChat. You can also view the code.</p></div><button id="id-toggle-code" class="id-ghost">Show code</button></div><div id="id-output-highlight-wrap" class="id-code-output" hidden><pre id="id-output-highlight" class="id-code-highlight" aria-label="Syntax-highlighted generated HTML"></pre></div><textarea id="id-output-html" readonly spellcheck="false" rows="5" hidden></textarea></section>
   </main>
   <aside class="id-inspector" aria-label="Design settings and selected element">
-    <div class="id-inspector-tabs"><button id="id-theme-tab" class="active" aria-pressed="true">Canvas</button><button id="id-element-tab" aria-pressed="false">Element</button></div>
-    <div id="id-theme-settings" class="id-inspector-body"><h2>Background &amp; borders</h2>
-      <label>Background <input id="id-theme-bg" type="color"></label><label>Gradient color <input id="id-theme-surface" type="color"></label>
-      <label class="id-inline"><span>Gradient</span><input id="id-theme-gradient" type="checkbox"></label><label>Gradient angle <input id="id-theme-angle" type="range" min="0" max="360"></label>
-      <label>Text color <input id="id-theme-text" type="color"></label><label>Accent color <input id="id-theme-accent" type="color"></label><label>Border color <input id="id-theme-border" type="color"></label>
+    <div class="id-inspector-tabs"><button id="id-theme-tab" class="active" aria-pressed="true">Card</button><button id="id-element-tab" aria-pressed="false">Selected item</button></div>
+    <div id="id-theme-settings" class="id-inspector-body"><h2>Card colors &amp; borders</h2>
+      <label>Background <input id="id-theme-bg" type="color"></label><label>Second background color <input id="id-theme-surface" type="color"></label>
+      <label class="id-inline"><span>Blend the two colors</span><input id="id-theme-gradient" type="checkbox"></label><label>Blend direction <input id="id-theme-angle" type="range" min="0" max="360"></label>
+      <label>Text color <input id="id-theme-text" type="color"></label><label>Highlight color <input id="id-theme-accent" type="color"></label><label>Border color <input id="id-theme-border" type="color"></label>
       <label>Font <select id="id-theme-font"><option value="Georgia, serif">Georgia</option><option value="Arial, sans-serif">Arial</option><option value="'Times New Roman', serif">Times New Roman</option><option value="Verdana, sans-serif">Verdana</option><option value="Tahoma, sans-serif">Tahoma</option><option value="'Trebuchet MS', sans-serif">Trebuchet MS</option><option value="'Courier New', monospace">Courier New</option></select></label>
-      <label>Container width <input id="id-theme-width" type="number" min="260" max="900"></label><label>Padding <input id="id-theme-padding" type="range" min="0" max="80"></label><label>Border width <input id="id-theme-borderwidth" type="range" min="0" max="10"></label><label>Border style <select id="id-theme-borderstyle"><option value="solid">Solid</option><option value="double">Double</option><option value="dashed">Dashed</option><option value="dotted">Dotted</option><option value="none">None</option></select></label><label>Corner roundness <input id="id-theme-radius" type="range" min="0" max="80"></label><label>Glow / shadow <input id="id-theme-shadow" type="range" min="0" max="70"></label><label>Default alignment <select id="id-theme-align"><option value="left">Left</option><option value="center">Center</option><option value="right">Right</option></select></label>
-      <details class="id-frame-section" open>
+      <label>Card width <input id="id-theme-width" type="number" min="260" max="900"></label><label>Space inside the card <input id="id-theme-padding" type="range" min="0" max="80"></label><label>Border thickness <input id="id-theme-borderwidth" type="range" min="0" max="10"></label><label>Border style <select id="id-theme-borderstyle"><option value="solid">Solid</option><option value="double">Double</option><option value="dashed">Dashed</option><option value="dotted">Dotted</option><option value="none">None</option></select></label><label>Rounded corners <input id="id-theme-radius" type="range" min="0" max="80"></label><label>Card glow <input id="id-theme-shadow" type="range" min="0" max="70"></label><label>Text alignment <select id="id-theme-align"><option value="left">Left</option><option value="center">Center</option><option value="right">Right</option></select></label>
+      <details class="id-frame-section id-adv" open>
         <summary>Layered border frames <span class="id-muted">Optional</span></summary>
         <p class="id-note">Add more than one border to create a layered look. The first one is the outside border.</p>
         <div class="id-frame-actions"><button id="id-frame-add" type="button" class="id-ghost">+ Add border frame</button><button id="id-frame-preset" type="button" class="id-ghost">Triple-frame example</button></div>
@@ -367,8 +390,8 @@
     </div>
     <div id="id-element-settings" class="id-inspector-body" hidden><h2 id="id-selected-name">Select a layer</h2>
       <div id="id-element-form" hidden>
-        <div class="id-prop-tabs" role="tablist" aria-label="Element settings"><button id="id-prop-content" class="active" type="button" data-prop-target="content">Content</button><button id="id-prop-style" type="button" data-prop-target="style">Style</button><button id="id-prop-advanced" type="button" data-prop-target="advanced">Advanced</button></div>
-        <fieldset id="id-position-editor" class="id-position-editor" hidden><legend>Position &amp; size on canvas</legend><p>Drag and resize directly in the preview, or type exact values.</p><label id="id-text-height-wrap" class="id-height-mode" hidden>Paragraph height<select id="id-text-height-mode"><option value="auto">Auto (fit text)</option><option value="fixed">Fixed (manual)</option></select></label><div class="id-position-fields"><label>Left (%)<input id="id-pos-x" type="number" min="0" max="95" step="1"></label><label>Top (px)<input id="id-pos-y" type="number" min="0" max="3000" step="1"></label><label>Width (%)<input id="id-pos-w" type="number" min="5" max="100" step="1"></label><label>Height (px)<input id="id-pos-h" type="number" min="24" max="1200" step="1"></label></div></fieldset>
+        <div class="id-prop-tabs" role="tablist" aria-label="Element settings"><button id="id-prop-content" class="active" type="button" data-prop-target="content">Content</button><button id="id-prop-style" type="button" data-prop-target="style">Style</button><button id="id-prop-advanced" class="id-adv" type="button" data-prop-target="advanced">Advanced</button></div>
+        <fieldset id="id-position-editor" class="id-position-editor id-adv" hidden><legend>Position &amp; size on canvas</legend><p>Drag and resize directly in the preview, or type exact values.</p><label id="id-text-height-wrap" class="id-height-mode" hidden>Paragraph height<select id="id-text-height-mode"><option value="auto">Auto (fit text)</option><option value="fixed">Fixed (manual)</option></select></label><div class="id-position-fields"><label>Left (%)<input id="id-pos-x" type="number" min="0" max="95" step="1"></label><label>Top (px)<input id="id-pos-y" type="number" min="0" max="3000" step="1"></label><label>Width (%)<input id="id-pos-w" type="number" min="5" max="100" step="1"></label><label>Height (px)<input id="id-pos-h" type="number" min="24" max="1200" step="1"></label></div></fieldset>
         <label id="id-text-wrap">Element text<textarea id="id-block-text" rows="5" placeholder="Write text or use {{intro}} to pull from Content"></textarea><small>Insert {{scene}}, {{name}}, {{intro}} or {{extra}} to reuse the content fields.</small></label>
         <label id="id-left-wrap" hidden>Left column<textarea id="id-block-left" rows="3"></textarea></label>
         <label id="id-right-wrap" hidden>Right column<textarea id="id-block-right" rows="3"></textarea></label>
@@ -405,47 +428,49 @@
           <label>Line color<input id="id-divider-color" type="color"></label>
           <label>Line thickness (px)<input id="id-divider-thickness" type="range" min="1" max="16" step="1"></label>
           <label>Gap around symbol (px)<input id="id-divider-gap" type="range" min="0" max="40" step="1"></label>
-          <label>Divider image URL (optional)<input id="id-divider-url" placeholder="https://.../divider.png" spellcheck="false" autocomplete="off"><small id="id-divider-url-status" aria-live="polite">Paste a public HTTPS image URL to use your own divider artwork.</small></label>
-          <label>Image placement<select id="id-divider-mode"><option value="replace">Replace divider with image</option><option value="between">Image between two lines</option></select></label>
-          <label>Image width (%)<input id="id-divider-imagewidth" type="range" min="10" max="100" step="1" value="100"></label>
+          <label class="id-adv">Divider image URL (optional)<input id="id-divider-url" placeholder="https://.../divider.png" spellcheck="false" autocomplete="off"><small id="id-divider-url-status" aria-live="polite">Paste a public HTTPS image URL to use your own divider artwork.</small></label>
+          <label class="id-adv">Image placement<select id="id-divider-mode"><option value="replace">Replace divider with image</option><option value="between">Image between two lines</option></select></label>
+          <label class="id-adv">Image width (%)<input id="id-divider-imagewidth" type="range" min="10" max="100" step="1" value="100"></label>
         </fieldset>
         <label id="id-spacer-wrap" hidden>Spacer height<input id="id-block-height" type="range" min="4" max="180"></label>
         <label id="id-ordered-wrap" hidden class="id-inline"><span>Numbered list</span><input id="id-block-ordered" type="checkbox"></label>
-        <label>Font family<input id="id-block-font" type="text" placeholder="Canvas font, or Georgia, serif" spellcheck="false"></label>
-        <label>Font size<input id="id-block-size" type="range" min="9" max="72"></label>
+        <label>Font<input id="id-block-font" type="text" placeholder="Canvas font, or Georgia, serif" spellcheck="false"></label>
+        <label>Text size<input id="id-block-size" type="range" min="9" max="72"></label>
         <label>Alignment<select id="id-block-align"><option value="left">Left</option><option value="center">Center</option><option value="right">Right</option><option value="justify">Justify</option></select></label>
-        <label>Weight<select id="id-block-weight"><option value="400">Regular</option><option value="600">Semibold</option><option value="700">Bold</option><option value="900">Heavy</option></select></label>
+        <label>Boldness<select id="id-block-weight"><option value="400">Regular</option><option value="600">Semibold</option><option value="700">Bold</option><option value="900">Heavy</option></select></label>
         <label>Text color<select id="id-block-color"><option value="text">Main text</option><option value="accent">Accent</option><option value="custom">Custom</option></select><input id="id-block-customcolor" type="color" hidden></label>
-        <label>Line spacing<input id="id-block-line" type="range" min="1" max="3" step="0.05"></label>
-        <label>Inside padding<input id="id-block-padding" type="range" min="0" max="60"></label>
-        <label>Outside spacing<input id="id-block-margin" type="range" min="0" max="70"></label>
-        <label>Letter spacing<input id="id-block-spacing" type="range" min="-2" max="12" step=".5"></label>
-        <label class="id-inline"><span>Panel background</span><input id="id-block-background" type="checkbox"></label><label id="id-bgcolor-wrap">Panel color<input id="id-block-bgcolor" type="color"></label>
+        <label>Space between lines<input id="id-block-line" type="range" min="1" max="3" step="0.05"></label>
+        <label>Space inside<input id="id-block-padding" type="range" min="0" max="60"></label>
+        <label>Space around<input id="id-block-margin" type="range" min="0" max="70"></label>
+        <label class="id-adv">Letter spacing<input id="id-block-spacing" type="range" min="-2" max="12" step=".5"></label>
+        <label class="id-inline"><span>Background box</span><input id="id-block-background" type="checkbox"></label><label id="id-bgcolor-wrap">Box color<input id="id-block-bgcolor" type="color"></label>
         <label class="id-inline"><span>Border</span><input id="id-block-borderon" type="checkbox"></label><label>Border color<input id="id-block-bordercolor" type="color"></label><label>Border width<input id="id-block-borderwidth" type="range" min="1" max="16"></label><label>Border style<select id="id-block-borderstyle"><option value="solid">Solid</option><option value="double">Double</option><option value="dashed">Dashed</option><option value="dotted">Dotted</option><option value="none">None</option></select></label><label>Roundness<input id="id-block-radius" type="range" min="0" max="80"></label>
-        <details class="id-effect-section"><summary>Text glow / multiple shadows</summary>
-          <label>Primary glow blur<input id="id-block-glow" type="range" min="0" max="60"></label>
-          <label>Primary glow color<input id="id-block-glowcolor" type="color"></label>
-          <label>Primary intensity<input id="id-block-glowopacity" type="range" min="0" max="1" step=".05"></label>
-          <label>Secondary glow blur<input id="id-block-glow2" type="range" min="0" max="80"></label>
-          <label>Secondary glow color<input id="id-block-glowcolor2" type="color"></label>
-          <label>Secondary intensity<input id="id-block-glowopacity2" type="range" min="0" max="1" step=".05"></label>
+        <details class="id-effect-section"><summary>Text glow</summary>
+          <label>Glow size<input id="id-block-glow" type="range" min="0" max="60"></label>
+          <label>Glow color<input id="id-block-glowcolor" type="color"></label>
+          <label>Glow strength<input id="id-block-glowopacity" type="range" min="0" max="1" step=".05"></label>
+          <label class="id-adv">Second glow size<input id="id-block-glow2" type="range" min="0" max="80"></label>
+          <label class="id-adv">Second glow color<input id="id-block-glowcolor2" type="color"></label>
+          <label class="id-adv">Second glow strength<input id="id-block-glowopacity2" type="range" min="0" max="1" step=".05"></label>
         </details>
-        <label>Panel shadow<input id="id-block-shadow" type="range" min="0" max="50"></label>
-        <fieldset id="id-layer-metadata" class="id-position-editor"><legend>Layer settings</legend>
+        <label>Box shadow<input id="id-block-shadow" type="range" min="0" max="50"></label>
+        <fieldset id="id-layer-metadata" class="id-position-editor id-adv"><legend>Layer settings</legend>
           <label>Layer name<input id="id-layer-custom-name" placeholder="Custom layer name" maxlength="70"></label>
           <label class="id-inline"><span>Show in canvas</span><input id="id-layer-visible" type="checkbox" checked></label>
           <label class="id-inline"><span>Lock position</span><input id="id-layer-locked" type="checkbox"></label>
         </fieldset>
-        <fieldset id="id-block-css-section" class="id-position-editor"><legend>Advanced inline CSS</legend>
+        <fieldset id="id-block-css-section" class="id-position-editor id-adv"><legend>Advanced inline CSS</legend>
           <p>Imported inline styles are shown here. Edit CSS directly or use the visual Style controls. Unsafe CSS is removed when compiling.</p>
           <textarea id="id-block-inline-css" rows="8" spellcheck="false" placeholder="font-size: 21px; color: rgb(242, 155, 203); border: 1px solid #714f79;"></textarea>
+          <small id="id-css-warn" class="id-warn" role="status" hidden></small>
         </fieldset>
         <div class="id-element-actions"><button id="id-block-up" class="id-ghost">↑ Move</button><button id="id-block-down" class="id-ghost">↓ Move</button><button id="id-block-duplicate" class="id-ghost">Duplicate</button><button id="id-block-delete" class="id-ghost id-danger">Delete</button></div>
-      </div><p id="id-none-selected" class="id-note">Choose a layer on the left or click the element in the preview to style it.</p>
+      </div><p id="id-none-selected" class="id-note">Click an item on the left, or click it in the preview, to change how it looks.</p>
     </div>
   </aside>
 </div>
-<footer class="id-footer"><div><strong id="id-counter">0 / 15,000 characters</strong><span id="id-budget" class="id-budget">JuicyChat character limit includes the generated HTML and text.</span></div><div class="id-footer-actions"><span id="id-message" aria-live="polite"></span><button id="id-close" class="id-ghost">Close</button><button id="id-copy" class="id-primary">Copy Introduction</button><button id="id-return" class="id-primary id-highlight" hidden>Save and Return to Studio</button></div></footer>
+<footer class="id-footer"><div><strong id="id-counter">0 / 15,000 characters</strong><span id="id-budget" class="id-budget">JuicyChat character limit includes the generated HTML and text.</span><div class="id-meter" aria-hidden="true"><i id="id-meter-bar"></i></div></div><div class="id-footer-actions"><span id="id-message" aria-live="polite"></span><button id="id-close" class="id-ghost">Close</button><button id="id-copy" class="id-primary">Copy Introduction</button><button id="id-return" class="id-primary id-highlight" hidden>Save and Return to Studio</button></div></footer>
+
 <script>/* Introduction Designer: static, JuicyChat-compatible HTML compiler.
  * All output uses inline styles and permitted tags only; no scripts or external CSS.
  * Dual-mode Node/browser module for deterministic tests. */
@@ -532,6 +557,8 @@
       {id:'b5',type:'quote',text:'{{extra}}',size:15,align:'center',color:'text',line:1.5,margin:10,placement:{x:5,y:472,w:90,h:85}}
     ]
   };}
+  // What a brand-new design starts as: the same content, STACKED (items follow each other, nothing to line up or overlap). "Free placement" stays available and computes positions when chosen.
+  function starter(){const d=initial();d.layout={mode:'flow',height:240,autoHeight:true,autoFitVersion:2,autoMakeRoom:true};for(const b of d.blocks)delete b.placement;return d;}
   function slotValues(doc){const f=doc?.fields||{};return Object.fromEntries(SLOTS.map(k=>[k,String(f[k]??'')]));}
   // Tokens get replaced after HTML escaping: slot content can never be interpreted as markup.
   function interpolate(text,fields){let s=escapeHtml(text);for(const k of SLOTS){const token=new RegExp('\\{\\{\\s*'+k+'\\s*\\}\\}','gi');s=s.replace(token,()=>escapeHtml(fields[k]||'').replace(/\r?\n/g,'<br>'));}return s;}
@@ -750,9 +777,10 @@
   // Data-only placeholders are preserved in saved templates. Importing/exporting JSON
   // copies the design, not a screenshot or a rendered string.
   function forTemplate(doc){const copy=JSON.parse(JSON.stringify(doc||initial()));copy.fields={scene:'',name:'',intro:'',extra:''};return copy;}
-  return {MAX,TYPES,SLOTS,TAGS,STYLES,initial,compile,placementOf,formatHtml,verifyOutput,forTemplate,newFrame,frameStyle,imageCrop,canvasHeight,interpolate,safeHttps,safeCss,parsedStyle,escapeHtml,cleanColor,clamp};
+  return {MAX,TYPES,SLOTS,TAGS,STYLES,initial,starter,compile,placementOf,formatHtml,verifyOutput,forTemplate,newFrame,frameStyle,imageCrop,canvasHeight,interpolate,safeHttps,safeCss,parsedStyle,escapeHtml,cleanColor,clamp};
 });
-</script><script>'use strict';
+</script>
+<script>'use strict';
 /* Collision-aware, grid-snapped Introduction canvas. Pure data helpers for
  * browser + Node tests; no UI libraries or runtime dependencies. */
 (function(root,factory){
@@ -1047,8 +1075,94 @@
   }
   return {snap,snapResize,normalize,region,overlap,arrange,makeRoom,reorderDrop,MAX_HEIGHT,DEFAULT_GAP};
 });
-</script><script>'use strict';
-/* Portable HTML edition: runs entirely in a local browser. No server or Node.js. */
+</script>
+<script>'use strict';
+/* Ready-made looks for the Introduction Designer.
+ * A look is a complete starting design (colors, fonts, frame, glow and the usual blocks) in the STACKED layout, so a beginner picks one, types their text and copies the code.
+ * Choosing a look replaces the design's styling and blocks but keeps the text typed into Scene Name, Character Name, Introduction and Extra text.
+ *   IntroLooks.list()            -> [{id, name, blurb}]
+ *   IntroLooks.design(id, Core)  -> a full design document for that look
+ *   IntroLooks.sample            -> the sample text used in the gallery thumbnails
+ *   IntroLooks.open({Core, apply}) -> opens the gallery (browser only); apply(design) is called with the chosen look
+ * Pure data plus a small gallery UI: no network, no script injected into the exported HTML. */
+(function (root, factory) {
+  if (typeof module === 'object' && module.exports) module.exports = factory(); else root.IntroLooks = factory();
+})(typeof self !== 'undefined' ? self : this, function () {
+  const sample = {scene: 'The Last Train', name: 'Mara Voss', intro: 'She was waiting on the platform when the lights went out. Now the only way home is through the carriage she swore she would never enter again.', extra: '"You came back. I knew you would."'};
+  const B = (type, text, extra) => ({type, text, ...extra});
+  // theme: the card; blocks: the stacked items in order. Every block is a normal designer block, so everything stays editable afterwards.
+  const LOOKS = [
+    {id: 'royal-violet', name: 'Royal Violet', blurb: 'Soft purple glow. The classic.',
+      theme: {background: '#171120', surface: '#251b32', text: '#f2e5ff', accent: '#c797e9', border: '#74508c', gradient: true, gradientAngle: 135, radius: 18, borderWidth: 2, padding: 24, shadow: 18, font: 'Georgia, serif'},
+      blocks: t => [B('heading', '{{scene}}', {size: 29, weight: 700, color: 'accent', glow: 10, padding: 6, margin: 10}), B('label', '{{name}}', {size: 14, weight: 700, color: 'accent', background: true, padding: 10, margin: 10}), B('divider', '✦', {size: 14, color: 'accent', margin: 13}), B('text', '{{intro}}', {size: 16, align: 'left', line: 1.65, padding: 5, margin: 12, manualHeight: false}), B('quote', '{{extra}}', {size: 15, line: 1.5, margin: 10, background: true, borderOn: true})]},
+    {id: 'midnight-blue', name: 'Midnight Blue', blurb: 'Cool blue with a glowing title.',
+      theme: {background: '#08121f', surface: '#0f2438', text: '#e4f1ff', accent: '#6ec6ff', border: '#2d6a9f', gradient: true, gradientAngle: 160, radius: 16, borderWidth: 2, padding: 24, shadow: 22, font: "'Trebuchet MS', sans-serif"},
+      blocks: t => [B('heading', '{{scene}}', {size: 30, weight: 800, color: 'accent', glow: 16, glow2: 34, padding: 6, margin: 10}), B('divider', '◆', {size: 12, color: 'accent', margin: 10}), B('label', '{{name}}', {size: 13, weight: 700, color: 'accent', background: true, padding: 8, margin: 10, borderOn: true, radius: 999}), B('text', '{{intro}}', {size: 16, align: 'left', line: 1.7, padding: 5, margin: 12, manualHeight: false}), B('quote', '{{extra}}', {size: 15, line: 1.5, margin: 10, background: true})]},
+    {id: 'crimson-noir', name: 'Crimson Noir', blurb: 'Dark with deep red accents.',
+      theme: {background: '#0e0809', surface: '#1d0e12', text: '#f5e6e8', accent: '#ff5a6e', border: '#7a1e2c', gradient: true, gradientAngle: 180, radius: 10, borderWidth: 2, padding: 26, shadow: 20, font: "'Times New Roman', serif"},
+      blocks: t => [B('heading', '{{scene}}', {size: 32, weight: 700, color: 'accent', glow: 8, padding: 6, margin: 8, spacing: 2}), B('label', '{{name}}', {size: 14, weight: 700, color: 'text', background: true, bgColor: '#3a1019', padding: 9, margin: 10, spacing: 3}), B('divider', '—', {size: 14, color: 'accent', margin: 12}), B('text', '{{intro}}', {size: 17, align: 'left', line: 1.7, padding: 4, margin: 12, manualHeight: false}), B('quote', '{{extra}}', {size: 16, line: 1.5, margin: 10, background: true, bgColor: '#2a0f16', borderOn: true, borderColor: '#7a1e2c'})]},
+    {id: 'forest-glow', name: 'Forest Glow', blurb: 'Deep green, gentle and calm.',
+      theme: {background: '#0a140e', surface: '#12261a', text: '#e8f5ea', accent: '#7ee0a0', border: '#2f7a4c', gradient: true, gradientAngle: 145, radius: 20, borderWidth: 2, padding: 24, shadow: 18, font: 'Georgia, serif'},
+      blocks: t => [B('heading', '{{scene}}', {size: 28, weight: 700, color: 'accent', glow: 8, padding: 6, margin: 10}), B('label', '{{name}}', {size: 14, weight: 700, color: 'accent', background: true, padding: 10, margin: 10, borderOn: true, radius: 14}), B('divider', '❦', {size: 16, color: 'accent', margin: 12}), B('text', '{{intro}}', {size: 16, align: 'left', line: 1.7, padding: 5, margin: 12, manualHeight: false}), B('quote', '{{extra}}', {size: 15, line: 1.5, margin: 10, background: true})]},
+    {id: 'rose-gold', name: 'Rose Gold', blurb: 'Warm pink and gold, a little glam.',
+      theme: {background: '#1c1013', surface: '#2c1a20', text: '#fbeaea', accent: '#f2b8a2', border: '#b0707a', gradient: true, gradientAngle: 135, radius: 22, borderWidth: 2, padding: 24, shadow: 20, font: 'Georgia, serif'},
+      blocks: t => [B('heading', '{{scene}}', {size: 30, weight: 700, color: 'accent', glow: 12, padding: 6, margin: 10}), B('label', '{{name}}', {size: 14, weight: 700, color: 'accent', background: true, padding: 10, margin: 10, borderOn: true, radius: 999}), B('divider', '❀', {size: 15, color: 'accent', margin: 12}), B('text', '{{intro}}', {size: 16, align: 'center', line: 1.7, padding: 5, margin: 12, manualHeight: false}), B('quote', '{{extra}}', {size: 16, line: 1.5, margin: 10, background: true})]},
+    {id: 'neon-night', name: 'Neon Night', blurb: 'Bright neon on black.',
+      theme: {background: '#07060d', surface: '#120d24', text: '#f0eaff', accent: '#39f5d0', border: '#a23bff', gradient: true, gradientAngle: 200, radius: 12, borderWidth: 2, padding: 24, shadow: 26, font: "'Courier New', monospace"},
+      blocks: t => [B('heading', '{{scene}}', {size: 28, weight: 800, color: 'accent', glow: 18, glow2: 40, glowColor: '#39f5d0', glowColor2: '#a23bff', padding: 6, margin: 10, spacing: 2}), B('label', '{{name}}', {size: 13, weight: 700, color: 'accent', background: true, bgColor: '#1d1240', padding: 8, margin: 10, borderOn: true, borderColor: '#a23bff', spacing: 2}), B('divider', '▰▰▰', {size: 12, color: 'accent', margin: 10}), B('text', '{{intro}}', {size: 15, align: 'left', line: 1.7, padding: 5, margin: 12, manualHeight: false}), B('quote', '{{extra}}', {size: 15, line: 1.5, margin: 10, background: true, borderOn: true, borderColor: '#39f5d0'})]},
+    {id: 'parchment', name: 'Old Parchment', blurb: 'Warm paper and ink, storybook style.',
+      theme: {background: '#efe3c8', surface: '#f7edd7', text: '#3b2a1a', accent: '#8a3b1f', border: '#a98b5a', gradient: true, gradientAngle: 160, radius: 8, borderWidth: 3, padding: 26, shadow: 10, font: "'Times New Roman', serif", borderStyle: 'double'},
+      blocks: t => [B('heading', '{{scene}}', {size: 32, weight: 700, color: 'accent', padding: 6, margin: 8}), B('label', '{{name}}', {size: 14, weight: 700, color: 'text', background: true, bgColor: '#e6d5ae', padding: 8, margin: 10, spacing: 2}), B('divider', '❧', {size: 18, color: 'accent', margin: 12}), B('text', '{{intro}}', {size: 17, align: 'justify', line: 1.7, padding: 5, margin: 12, manualHeight: false}), B('quote', '{{extra}}', {size: 16, line: 1.5, margin: 10, background: true, bgColor: '#ead9b3', borderOn: true, borderColor: '#a98b5a'})]},
+    {id: 'clean-light', name: 'Clean Light', blurb: 'Bright, simple and easy to read.',
+      theme: {background: '#f4f6fb', surface: '#ffffff', text: '#1f2937', accent: '#5b6cf0', border: '#c9d1ea', gradient: false, gradientAngle: 135, radius: 16, borderWidth: 1, padding: 24, shadow: 12, font: 'Arial, sans-serif'},
+      blocks: t => [B('heading', '{{scene}}', {size: 28, weight: 800, color: 'accent', padding: 6, margin: 10}), B('label', '{{name}}', {size: 13, weight: 700, color: 'accent', background: true, bgColor: '#e8ebff', padding: 8, margin: 10, radius: 999}), B('divider', '•', {size: 14, color: 'accent', margin: 10}), B('text', '{{intro}}', {size: 16, align: 'left', line: 1.7, padding: 5, margin: 12, manualHeight: false}), B('quote', '{{extra}}', {size: 15, line: 1.5, margin: 10, background: true, bgColor: '#f0f2ff', borderOn: true, borderColor: '#c9d1ea'})]}
+  ];
+  const list = () => LOOKS.map(({id, name, blurb}) => ({id, name, blurb}));
+  function design(id, Core) {
+    const look = LOOKS.find(l => l.id === id) || LOOKS[0], d = Core.starter();
+    d.title = look.name;
+    d.theme = Object.assign({}, d.theme, look.theme, {frames: [], maxWidth: 640, align: 'center'});
+    d.blocks = look.blocks(d.theme).map((b, i) => Object.assign({id: 'look-' + id + '-' + i, align: 'center', weight: 400, color: 'text', line: 1.5, padding: 8, margin: 12, spacing: 0, bgColor: d.theme.surface, borderColor: d.theme.border, borderWidth: 1, borderStyle: 'solid', radius: 12, glow: 0, glow2: 0, glowOpacity: .75, glowOpacity2: .4}, b));
+    d.fields = Object.assign({}, sample);
+    return d;
+  }
+
+  // ---- the gallery (browser only)
+  function open({Core, apply, current}) {
+    if (typeof document === 'undefined') return null;
+    const old = document.getElementById('id-looks'); if (old) old.remove();
+    const wrap = document.createElement('div'); wrap.id = 'id-looks'; wrap.className = 'id-looks'; wrap.setAttribute('role', 'dialog'); wrap.setAttribute('aria-modal', 'true'); wrap.setAttribute('aria-label', 'Pick a look');
+    const box = document.createElement('div'); box.className = 'id-looks-box';
+    const head = document.createElement('div'); head.className = 'id-looks-head';
+    head.innerHTML = '<div><h2>Pick a look</h2><p>Choose a starting style. Your text stays; you can change every color, font and block afterwards. Ctrl+Z undoes it.</p></div>';
+    const close = document.createElement('button'); close.type = 'button'; close.className = 'id-ghost'; close.textContent = 'Close'; head.appendChild(close);
+    const grid = document.createElement('div'); grid.className = 'id-looks-grid';
+    for (const l of LOOKS) {
+      const card = document.createElement('button'); card.type = 'button'; card.className = 'id-look'; card.dataset.look = l.id;
+      const thumb = document.createElement('div'); thumb.className = 'id-look-thumb'; thumb.setAttribute('aria-hidden', 'true');
+      const inner = document.createElement('div'); inner.className = 'id-look-inner';
+      try { inner.innerHTML = Core.compile(design(l.id, Core)); } catch (e) { inner.textContent = ''; }   // our own compiler's static output, never user HTML
+      thumb.appendChild(inner);
+      const name = document.createElement('strong'); name.textContent = l.name;
+      const blurb = document.createElement('span'); blurb.textContent = l.blurb;
+      card.append(thumb, name, blurb);
+      card.onclick = () => { const d = design(l.id, Core); wrap.remove(); apply(d, l); };
+      grid.appendChild(card);
+    }
+    box.append(head, grid); wrap.appendChild(box); document.body.appendChild(wrap);
+    const shut = () => { wrap.remove(); document.removeEventListener('keydown', onKey, true); };
+    function onKey(e) { if (e.key === 'Escape') { e.stopPropagation(); shut(); } }
+    close.onclick = shut; wrap.addEventListener('mousedown', e => { if (e.target === wrap) shut(); }); document.addEventListener('keydown', onKey, true);
+    const first = grid.querySelector('button'); if (first) first.focus();
+    return {close: shut};
+  }
+  return {list, design, open, sample, LOOKS};
+});
+</script>
+<script>'use strict';
+/* Host adapter for the stand-alone web page (GitHub Pages / a downloaded .html file).
+ * NOT loaded inside Blueprint Studio or the Creator Tool: they have their own host (preload.js / creator-bridge.js).
+ * scripts/sync-designer.js inlines this file into the single-file page. */
 (() => {
   const CORE=window.IntroCore;
   const KEYS={templates:'introductionDesigner.portable.templates.v1',draft:'introductionDesigner.portable.draft.v1'};
@@ -1074,7 +1188,7 @@
     const okay=document.execCommand('copy');area.remove();if(!okay)throw Error('Browser blocked clipboard access. Use Show code and copy the output manually.');return text.length;
   }
   window.introHost={
-    bootstrap:async()=>({embedded:false,seed:null,draft:get(KEYS.draft,volatileDraft),templates:load(),appVersion:'1.0.6'}),
+    bootstrap:async()=>({embedded:false,seed:null,draft:get(KEYS.draft,volatileDraft),templates:load(),appVersion:'portable'}),
     saveDraft:async doc=>{checkDoc(doc);volatileDraft=doc;put(KEYS.draft,doc);return true;},
     templates:async()=>load(),
     saveTemplate:async(name,doc,id)=>{checkDoc(doc);const all=load(),key=id||makeId();const t={id:key,name:String(name||'My template').slice(0,90),design:CORE.forTemplate(doc),savedAt:new Date().toISOString()};const i=all.findIndex(x=>x.id===key);if(i>=0)all[i]=t;else all.push(t);if(all.length>100)throw Error('Template library holds up to 100 templates.');store(all);return t;},
@@ -1096,7 +1210,8 @@
     onContext:()=>{}
   };
 })();
-</script><script>'use strict';
+</script>
+<script>'use strict';
 /* Visual Introduction Designer. No dynamic script enters exported HTML. */
 (() => {
   const C=window.IntroCore,L=window.IntroLayout,host=window.introHost;
@@ -1154,6 +1269,7 @@
     pre.innerHTML=highlightHtml(input.value)+'\n';
     pre.scrollTop=input.scrollTop;pre.scrollLeft=input.scrollLeft;
     const live=$('id-import-live-preview');if(live)live.innerHTML=sanitizeHtml(input.value);
+    const warn=$('id-import-warn');if(warn){const msg=removedSummary();warn.textContent=msg;warn.hidden=!msg;}
   }
 
   const editable=['heading','text','label','quote','divider','list','link','custom'];
@@ -1809,7 +1925,11 @@
     $('id-layer-custom-name').oninput=e=>changeSelected(b=>{b.customName=e.target.value;});
     $('id-layer-visible').onchange=e=>changeSelected(b=>{b.hiddenInDesigner=!e.target.checked;});
     $('id-layer-locked').onchange=e=>changeSelected(b=>{b.locked=e.target.checked;});
-    $('id-block-inline-css').oninput=e=>changeSelected(b=>{b.importedStyle=sanitizeInlineStyles(e.target.value);b.styleOverrides={};});
+    $('id-block-inline-css').oninput=e=>{
+      const gone=[];for(const part of String(e.target.value||'').split(';')){const i=part.indexOf(':');if(i<1)continue;const name=part.slice(0,i).trim().toLowerCase();if(name&&!C.safeCss(name,part.slice(i+1).trim()))gone.push(name);}
+      const warn=$('id-css-warn');if(warn){warn.textContent=gone.length?'Not allowed by JuicyChat, so it is left out: '+[...new Set(gone)].join(', ')+'.':'';warn.hidden=!gone.length;}
+      changeSelected(b=>{b.importedStyle=sanitizeInlineStyles(e.target.value);b.styleOverrides={};});
+    };
     $('id-text-height-mode').onchange=e=>{
       const b=blockOf(selectedId);if(!b||b.type!=='text')return;
       b.manualHeight=e.target.value==='fixed';
@@ -1931,7 +2051,18 @@
   }
   // Parse imported HTML into a safe, static subset of JuicyChat's guide. No
   // scripts, event handlers, frames, base tags, linked CSS, or unsafe URLs.
+  // What the last sanitizeHtml() call had to remove, so people are told instead of silently losing styling.
+  let removedCode={styles:new Set(),tags:new Set()};
+  function removedSummary(){
+    const styles=[...removedCode.styles],tags=[...removedCode.tags];
+    if(!styles.length&&!tags.length)return '';
+    const parts=[];
+    if(styles.length)parts.push('styles JuicyChat does not allow ('+styles.slice(0,8).join(', ')+(styles.length>8?', …':'')+')');
+    if(tags.length)parts.push('unsupported HTML ('+tags.slice(0,8).map(t=>'<'+t+'>').join(', ')+(tags.length>8?', …':'')+')');
+    return 'Removed '+parts.join(' and ')+'. JuicyChat only keeps simple inline-styled HTML.';
+  }
   function sanitizeHtml(source){
+    removedCode={styles:new Set(),tags:new Set()};
     if(typeof DOMParser==='undefined')return '';
     const parsed=new DOMParser().parseFromString('<div id="id-import-root">'+String(source||'')+'</div>','text/html');
     const body=parsed.querySelector('#id-import-root');if(!body)return '';
@@ -1939,9 +2070,9 @@
     function clean(node){
       if(node.nodeType===Node.TEXT_NODE)return escape(node.nodeValue||'');
       if(node.nodeType!==Node.ELEMENT_NODE)return '';
-      const tag=node.tagName.toLowerCase();if(dropped.includes(tag))return '';
+      const tag=node.tagName.toLowerCase();if(dropped.includes(tag)){removedCode.tags.add(tag);return '';}
       const content=[...node.childNodes].map(clean).join('');
-      if(!C.TAGS.has(tag))return content;
+      if(!C.TAGS.has(tag)){removedCode.tags.add(tag);return content;}
       const attrs=[];
       if(tag==='img'){
         const url=C.safeHttps(node.getAttribute('src'));if(!url)return '';
@@ -1957,7 +2088,7 @@
       for(const part of String(node.getAttribute('style')||'').split(';')){
         const i=part.indexOf(':');if(i<1)continue;
         const property=part.slice(0,i).trim().toLowerCase(),val=C.safeCss(property,part.slice(i+1).trim());
-        if(val)styles.push(`${property}: ${val}`);
+        if(val)styles.push(`${property}: ${val}`);else removedCode.styles.add(property);
       }
       if(styles.length)attrs.push(`style="${escape(styles.join(';'))}"`);
       const attr=attrs.length?' '+attrs.join(' '):'';
@@ -2146,8 +2277,11 @@
       rendered=C.formatHtml(compile());const count=C.verifyOutput(rendered);const warn=count.issues;
       $('id-counter').textContent=`${count.length.toLocaleString()} / 15,000 characters`;
       $('id-counter').classList.toggle('error',!count.valid);
-      $('id-budget').textContent=warn.length?warn.join(' '):`${count.remaining.toLocaleString()} characters left, including all HTML styling and text.`;
-      $('id-budget').classList.toggle('error',!count.valid);
+      const nearLimit=count.valid&&count.length>=12000;
+      $('id-budget').textContent=warn.length?warn.join(' '):nearLimit?`Getting close: ${count.remaining.toLocaleString()} left. The styling code counts too, not just your words, so shorten the text or remove a decoration if you run out.`:`${count.remaining.toLocaleString()} characters left. The styling code counts too, not just your words.`;
+      $('id-budget').classList.toggle('error',!count.valid);$('id-budget').classList.toggle('warn',nearLimit);
+      $('id-counter').classList.toggle('warn',nearLimit);
+      const bar=$('id-meter-bar');if(bar){bar.style.width=Math.min(100,count.length/150)+'%';bar.dataset.level=!count.valid?'over':nearLimit?'warn':'ok';}
       $('id-copy').disabled=!count.valid;$('id-return').disabled=!count.valid;
       $('id-output-html').value=rendered;$('id-output-highlight').innerHTML=highlightHtml(rendered);
       syncLayoutUI();
@@ -2422,7 +2556,7 @@
     $('id-visual-tab').onclick=()=>chooseView('visual');$('id-html-tab').onclick=()=>chooseView('html');
     $('id-back-visual').onclick=()=>chooseView('visual');
     $('id-apply-html').onclick=()=>{
-      const raw=$('id-custom-html').value;const clean=sanitizeHtml(raw);
+      const raw=$('id-custom-html').value;const clean=sanitizeHtml(raw);const removedNote=removedSummary();
       if(!clean.trim())return notice('Paste guide-compatible HTML before importing.',true);
       const before=C.verifyOutput(sourceWithSlots(clean));if(!before.valid)return notice(before.issues.join(' '),true);
       const translation=visualDocumentFromHtml(clean);
@@ -2442,12 +2576,12 @@
         }))).then(()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{
           if(doc===importedDoc&&doc.mode==='visual'){
             switchLayout('freeform');
-            notice(`Imported ${translation.blocks.length} movable layers and ${translation.theme.frames.length} nested border frames. Original inline styles preserved.`);
+            notice(`Imported ${translation.blocks.length} movable layers and ${translation.theme.frames.length} nested border frames. Original inline styles preserved.`+(removedNote?' '+removedNote:''));
           }
         })));
       }else{
         doc.mode='source';doc.sourceHtml=clean;selectedId=null;renderLayers();showInspector();renderOutput();queueSave();chooseView('visual');
-        notice('HTML imported in source mode. Unsupported HTML was removed.');
+        notice('HTML imported in source mode. '+(removedNote||'Nothing needed removing.'));
       }
     };
     $('id-return-generated').onclick=()=>{
@@ -2458,7 +2592,7 @@
     $('id-toggle-code').onclick=()=>{const el=$('id-output-highlight-wrap');el.hidden=!el.hidden;$('id-toggle-code').textContent=el.hidden?'Show code':'Hide code';};
     $('id-theme-tab').onclick=()=>{$('id-theme-tab').classList.add('active');$('id-element-tab').classList.remove('active');showBlockPanel();};
     $('id-element-tab').onclick=()=>{$('id-element-tab').classList.add('active');$('id-theme-tab').classList.remove('active');showBlockPanel();};
-    $('id-new').onclick=()=>{if(!confirm('Start a fresh Introduction design? Your saved templates will stay available.'))return;templateId=null;fromSaved(C.initial());notice('Started a fresh design.');};
+    $('id-new').onclick=()=>{if(!confirm('Start a fresh Introduction design? Your saved templates will stay available.'))return;templateId=null;fromSaved(C.starter());notice('Started a fresh design.');};
     $('id-save-template').onclick=async()=>{
       const name=prompt('Name your reusable Introduction template:',doc.title||'My Introduction Design');if(!name)return;
       try{const record=await host.saveTemplate(name,doc);templateId=record.id;doc.title=record.name;await refreshTemplates();$('id-template-select').value=record.id;notice('Template saved. You can reuse this design with new text.');}
@@ -2483,11 +2617,11 @@
   async function refreshTemplates(){templates=await host.templates();const sel=$('id-template-select'),was=sel.value;sel.replaceChildren(new Option('Saved templates',''));for(const t of templates)sel.add(new Option(t.name,t.id));if(templates.some(t=>t.id===was))sel.value=was;}
   function seedData(seed,draft){
     if(seed?.design){fromSaved(seed.design);return;}
-    if(seed?.fields){const next=C.initial();next.fields={...next.fields,...seed.fields};
+    if(seed?.fields){const next=C.starter();next.fields={...next.fields,...seed.fields};
       if(seed.sourceHtml){next.mode='source';next.sourceHtml=sanitizeHtml(seed.sourceHtml);}
       fromSaved(next);return;
     }
-    if(draft){fromSaved(draft);return;}fromSaved(C.initial());
+    if(draft){fromSaved(draft);return;}fromSaved(C.starter());
   }
   async function start(){
     addRangeNumbers(document.querySelector('.id-inspector'));
@@ -2500,7 +2634,108 @@
     }catch(e){seedData(null,null);notice('Template storage unavailable: '+e.message,true);}
     renderOutput();
   }
+  // Small public surface for the optional add-ons (looks gallery, Simple mode). Nothing here changes saved data formats.
+  const defaultFields=C.initial().fields;
+  window.IntroDesigner={
+    current:()=>doc,
+    notice,
+    isDefaultText(){const v=formValues();return C.SLOTS.every(k=>!String(v[k]||'').trim()||String(v[k]).trim()===defaultFields[k]);},
+    // Replace the styling and blocks with a ready-made design. Typed text is kept unless the boxes still hold the placeholders.
+    applyDesign(design,{keepText}={}){
+      templateId=null;
+      if(chooseView)chooseView('visual');
+      fromSaved(design,keepText!==false&&!this.isDefaultText());
+      notice('Look applied. Press Ctrl+Z to undo.');
+    },
+    setPropertyTab,
+    showTab:name=>{(name==='element'?$('id-element-tab'):$('id-theme-tab')).click();},
+    refresh:()=>{renderOutput();}
+  };
   start();
+})();
+</script>
+<script>'use strict';
+/* Simple / Advanced mode, "Pick a look" button and first-visit tips for the Introduction Designer.
+ * Loaded after app.js and talks to it only through window.IntroDesigner, so it can be dropped into any host
+ * (Blueprint Studio, the Creator Tool, the GitHub Pages page) without changes.
+ * Simple mode only HIDES controls (anything marked class "id-adv"); it never changes the design or what is exported. */
+(() => {
+  const D = window.IntroDesigner, Looks = window.IntroLooks, Core = window.IntroCore;
+  if (!D) return;
+  const $ = id => document.getElementById(id);
+  const store = {
+    get(k) { try { return window.localStorage.getItem('introDesigner.' + k); } catch (e) { return null; } },
+    set(k, v) { try { window.localStorage.setItem('introDesigner.' + k, v); } catch (e) { /* storage may be blocked */ } }
+  };
+  const el = (tag, props, ...kids) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(props || {})) { if (k === 'text') n.textContent = v; else if (k === 'class') n.className = v; else n.setAttribute(k, v); }
+    for (const kid of kids) n.append(kid);
+    return n;
+  };
+
+  // ---- Pick a look ----
+  function openLooks() {
+    if (!Looks) return D.notice('The looks gallery did not load.', true);
+    Looks.open({ Core, apply: design => D.applyDesign(design) });
+  }
+  const looksButton = $('id-looks-open');
+  if (looksButton) looksButton.onclick = openLooks;
+
+  // ---- Simple / Advanced ----
+  const simpleBtn = el('button', { type: 'button', text: 'Simple', title: 'Only the everyday controls' });
+  const advBtn = el('button', { type: 'button', text: 'Advanced', title: 'Every control, free placement and HTML import' });
+  const toggle = el('div', { class: 'id-toggle id-mode', role: 'group', 'aria-label': 'Interface mode' }, simpleBtn, advBtn);
+  const actions = document.querySelector('.id-top-actions');
+  if (actions) actions.prepend(toggle);
+
+  function setMode(mode, remember = true) {
+    const simple = mode !== 'advanced';
+    document.body.classList.toggle('id-simple', simple);
+    simpleBtn.classList.toggle('active', simple); advBtn.classList.toggle('active', !simple);
+    simpleBtn.setAttribute('aria-pressed', String(simple)); advBtn.setAttribute('aria-pressed', String(!simple));
+    if (simple) {
+      // Leave anything that is now hidden.
+      if ($('id-visual-panel').hidden) { const tab = $('id-visual-tab'); if (tab) tab.click(); }
+      if (document.querySelector('#id-element-form[data-property-tab="advanced"]')) D.setPropertyTab('content');
+    }
+    if (remember) store.set('mode', simple ? 'simple' : 'advanced');
+  }
+  simpleBtn.onclick = () => setMode('simple');
+  advBtn.onclick = () => setMode('advanced');
+  setMode(store.get('mode') === 'advanced' ? 'advanced' : 'simple', false);
+
+  // A design made from pasted HTML can only be edited in Advanced mode, so open it there.
+  setTimeout(() => {
+    try {
+      if (D.current().mode === 'source' && document.body.classList.contains('id-simple')) {
+        setMode('advanced', false);
+        D.notice('This introduction was built from custom HTML, so Advanced mode is on.');
+      }
+    } catch (e) { /* ignore */ }
+  }, 400);
+
+  // ---- First-visit tips ----
+  const main = document.querySelector('.id-workspace');
+  const tips = el('div', { id: 'id-tips', class: 'id-tips', role: 'region', 'aria-label': 'Getting started' });
+  const lookStep = el('button', { type: 'button', class: 'id-primary', text: '✦ Pick a look' });
+  lookStep.onclick = openLooks;
+  const step = (n, ...kids) => el('li', {}, el('b', { text: String(n) }), el('span', {}, ...kids));
+  const closeTips = el('button', { type: 'button', class: 'id-ghost', text: 'Got it' });
+  tips.append(
+    el('strong', { text: 'Three steps:' }),
+    el('ol', {},
+      step(1, 'Choose a style ', lookStep),
+      step(2, 'Type your text on the left'),
+      step(3, 'Press “Copy Introduction” at the bottom, then paste it into JuicyChat')),
+    closeTips);
+  if (main) main.prepend(tips);
+  const showTips = on => { tips.hidden = !on; if (!on) store.set('tipsSeen', '1'); };
+  closeTips.onclick = () => showTips(false);
+  showTips(store.get('tipsSeen') !== '1');
+  const help = el('button', { type: 'button', class: 'id-ghost', text: '?', title: 'Show the quick-start steps', 'aria-label': 'Show the quick-start steps' });
+  help.onclick = () => { tips.hidden = false; tips.scrollIntoView({ block: 'nearest' }); };
+  if (actions) actions.prepend(help);
 })();
 </script>
 </body></html>
