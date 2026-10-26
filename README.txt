@@ -1,9 +1,9 @@
-# Introduction Designer (web page): what's new
+# Introduction Designer (web page): What's new
 
 A simpler designer for JuicyChat introductions. Pick a style, type your text, copy the code.
 
 ## New
-- **Simple mode (default).** Only the everyday controls show. The **Advanced** switch in the top bar brings back everything: Paste HTML, free placement, layered borders and per-item CSS. Your choice is remembered, and nothing in your design is deleted when you switch.
+- **Simple mode (default).** Only the everyday controls show. The **Advanced** switch in the top bar brings back everything: Paste HTML, free placement, layered borders, and per-item CSS. Your choice is remembered, and nothing in your design is deleted when you switch.
 - **Pick a look.** 8 ready-made styles: Royal Violet, Midnight Blue, Crimson Noir, Forest Glow, Rose Gold, Neon Night, Old Parchment and Clean Light. Your text stays, and **Ctrl+Z** undoes it.
 - **Character meter.** A bar under the counter turns amber near 12,000 characters and red over JuicyChat's 15,000 limit. The styling code counts too, not just your words.
 - **Removed-code warning.** A note lists the CSS styles or HTML tags that JuicyChat's rules removed, both when you paste HTML and when you edit an item's CSS.
